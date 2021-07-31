@@ -1,0 +1,107 @@
+jQuery(document).ready(function($)
+{
+  // Geolocation script - country popup
+  if (sessionStorage.country_popup != "no")
+  {
+    $.get("https://api.ipstack.com/check?access_key=d80994ea081160066e2740ea91b25ed0&format=1&fields=country_name,country_code,continent_code", function(data)
+    {
+      data = JSON.parse(JSON.stringify(data));
+
+      if (data.country_code == "DE" || data.country_code == "GB" || data.country_code == "NL" || data.country_code == "BE" || data.country_code == "LU" || data.country_code == "DK" || data.country_code == "NO" || data.country_code == "SW" || data.country_code == "FR" || data.country_code == "RU" || data.country_code == "AU" || data.country_code == "HK")
+      {
+        if (data.country_code == "DE")
+        {
+          var link = "https://headphonecompany.com";
+          var btitle = "HeadPhone Company";
+        }
+        else if (data.country_code == "GB")
+        {
+          var link = "http://www.scvdistribution.co.uk/category/meze-audio";
+          var btitle = "SCV Distribution";
+        }
+        else if (data.country_code == "NL" || data.country_code == "BE" || data.country_code == "LU" || data.country_code == "DK" || data.country_code == "NO" || data.country_code == "SW")
+        {
+          var link = "http://www.duneblue.com/dealers";
+          var btitle = "DuneBlue";
+        }
+        else if (data.country_code == "FR")
+        {
+          var link = "https://www.elitediffusion.com/hifi/casque-audio.html";
+          var btitle = "Elite Diffusion";
+        }
+        else if (data.country_code == "RU")
+        {
+          var link = "https://blade.ru/brands/meze";
+          var btitle = "Blade";
+        }
+        else if (data.country_code == "AU")
+        {
+          var link = "https://www.radianceav.com.au";
+          var btitle = "Radiance Audio Visual";
+        }
+        else if (data.country_code == "HK")
+        {
+          var link = "https://shop.price.com.hk/soundwaveaudio/category/13369";
+          var btitle = "Soundwave Audio";
+        }
+
+        var popup = "<p class='main-text-pop'>It looks like you're visiting us from "+data.country_name+", where you have a local distributor. &ensp; <a href='"+link+"' class='btn btn-primary btn-outline' target='_blank'>Visit "+btitle+"</a></p><a href='#' class='country-popup-close'><i class='fa fa-times'></i></a>";
+
+        $(".country-notif").append(popup);
+        $(".full-width").addClass("visible");
+
+        // Store country_popup in current session
+        sessionStorage.country_popup = "yes";
+
+        $(".country-popup-close").click(function()
+        {
+          $(".full-width").removeClass("visible");
+         	$(".full-width").css( "height", "0px" );
+
+          sessionStorage.country_popup = "no";
+        });
+      }
+      else if (data.country_code == "RO")
+      {
+        if (window.location.href !== "https://mezeaudio.eu/pages/livrare-ramburs")
+        {
+      		sessionStorage.country_popup = "yes";
+
+          var link = "https://mezeaudio.eu/pages/livrare-ramburs";
+
+          var popup = "<p class='main-text-pop'>Daca esti din România, poti cumpara produse Meze si le poti plati prin ramburs &ensp; <a href='"+link+"' class='btn btn-primary btn-outline'>Mai mult</a></p><p class='country-popup-close'><i class='fa fa-times'></i></p>";
+
+          $(".country-notif").append(popup);
+          $(".full-width").addClass("visible");
+
+          $(".country-popup-close").click(function()
+          {
+            $(".full-width").removeClass("visible");
+          	$(".full-width").css( "height", "0px" );
+
+            sessionStorage.country_popup = "no";
+          });
+     	  }
+      }
+
+      // Region notification on the product page
+      if (data.continent_code == "EU") {
+        $(".product-info").mouseenter(function() {
+          $(".product-info .region-reminder").addClass("visible");
+        });
+
+        $(".product-info").mouseleave(function() {
+          $(".product-info .region-reminder").removeClass("visible");
+        });
+
+        if ($(window).scrollTop() > $(".region-reminder").offsetTop) {
+          $(".product-info .region-reminder").addClass("visible");
+        }
+      }
+    });
+  }
+
+  var interval = setInterval(function() {
+    sessionStorage.country_popup = "yes";
+  }, 100000);
+});

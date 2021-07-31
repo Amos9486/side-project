@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_BS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.2-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <style>
+        .nav-icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a{
+            font-size: 20px;
+            color: #ccc
+        }
+
+        .nav-user:hover a,
+        .nav-dollar:hover a,
+        .nav-shopping-bag:hover a {
+            color: yellow;
+        }
+
+        .nav-name {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .head-1 {
+            background: linear-gradient(rgb(92, 87, 87), black, rgb(83, 81, 81));
+            width: 100%;
+        }
+
+        .head-1-function {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head-logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .head-logo,
+        .head-shop,
+        .head-artists {
+            width: 33%;
+        }
+
+        .head-logo {
+            text-align: center;
+        }
+
+        .head-shop,
+        .head-artists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head-shop a,
+        .head-artists a {
+            font-size: 20px;
+            color: white;
+        }
+
+        .main,
+        .carousel-1,
+        .carousel-2,
+        .next-page {
+            width: 100%;
+            background-color: #adaaa1;
+        }
+
+        .main-name {
+            margin: 0 auto;
+            font-size: 30px;
+            color: #8c8574;
+            padding-top: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .main-function {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .main-mark {
+            margin-bottom: 30px;
+        }
+
+        .main-mark img {
+            filter: grayscale(1);
+            width: 100%;
+        }
+
+        .main-mark img:hover {
+            filter: saturate(0.5);
+        }
+
+        .carousel-2-function {
+            padding: 10%;
+            text-align: center;
+        }
+
+        .carousel-2-function P {
+            font-family: 'Caveat', cursive;
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .next-page-function {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .next-page-1 {
+            margin: 1%;
+        }
+
+        .next-page-1 a {
+            font-size: 40px;
+        }
+
+        .next-page-1:hover {
+            color: yellow;
+        }
+
+        .picture-1 {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .picture-2 {
+            width: 100%;
+        }
+
+        .main-name-1 {
+            font-size: 30px;
+            color: #8c8574;
+            margin: 5rem 0;
+            text-align: center;
+        }
+
+        .audio-name {
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+
+        }
+
+        .audio-name a {
+            color: #8c8574;
+            font-size: 18px;
+        }
+
+        .line {
+            border-top: 1px solid black;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .line-1 {
+            border-top: 1px solid #9D9889;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .audio-image {
+            width: 30%;
+        }
+
+        .vedio {
+            margin-top: 20px;
+        }
+
+        .people-function {
+            margin: 50px;
+        }
+
+        .people {
+            width: 15vw;
+            height: 15vw;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 1rem;
+            /* transition-timing-function:linear; */
+
+        }
+
+        .people img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .people-name,
+        .people-position {
+            text-align: center;
+            margin: 1rem auto;
+        }
+
+        .people:hover .people-dark {
+            display: none;
+        }
+
+        .watermark {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .watermark-1 {
+            text-align: center;
+        }
+
+        .watermark-1 P {
+            font-size: 20px;
+            color: #8c8574;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: black;
+        }
+
+        .footer h4 {
+            color: #9D9889;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .plus {
+            color: #9D9889;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+
+        .footer-h {
+            padding-top: 50px;
+        }
+
+        .footer-top {
+            justify-content: space-between;
+        }
+
+        .pay-f {
+            justify-content: space-evenly;
+        }
+
+        .pay a {
+            font-size: 50px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #9D9889;
+            text-align: center;
+        }
+
+        .footer-icon-f {
+            justify-content: center;
+        }
+
+        .footer-icon a {
+            font-size: 50px;
+            margin: 0 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        @media screen and (max-width:992px) {
+
+            .head-shop a,
+            .head-artists a,
+            .nav-shopping-bag span,
+            .nav-user span,
+            .HEAD-FI,
+            .INNERFIDELITY {
+                display: none;
+            }
+
+        }
+
+        /* @media screen and (min-width:992px){
+            .navbar-toggler{
+                display: none;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="nav">
+        <div class="container">
+            <div class="row nav-function ">
+                <div class="menu-button">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </div>
+                <div class="nav-icon">
+                    <div class="nav-user">
+                        <a href="#"><i class="fas fa-user-alt"></i></a>
+                    </div>
+                    <div class="nav-dollar">
+                        <a href="#"><i class="fas fa-dollar-sign"></i></a>
+                        <span class="nav-name">USD</span>
+                        <a href="#"><i class="fas fa-chevron-down"></i></a>
+                    </div>
+                    <div class="nav-shopping-bag">
+                        <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="top">
+        <div class="cantainer">
+            <a href="#"> </a>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="nav-icon ">
+                <div class="nav-user col-4 col-lg-5">
+                    <a href="#"><i class="fas fa-user-alt"><span class="nav-icon-name ">Sign In</span></i></a>
+                </div>
+                <div class="nav-dollar col-7 col-lg-4 ">
+                    <a href="#"><i class="fas fa-dollar-sign"><span class="nav-icon-name">USD</span></i></a>
+
+                    <a href="#"><i class="fas fa-chevron-down"></i></a>
+                </div>
+                <div class="nav-shopping-bag col-2 col-lg-3 ">
+                    <a href="#"><i class="fas fa-shopping-bag"><span class="nav-icon-name ">0item</span></i></a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="head-1">
+        <div class="container">
+            <div class="row head-1-function">
+                <div class="head-shop ">
+                    <p><a href="#">SHOP</a></p>
+                    <p><a href="#">REVIEWS</a></p>
+                    <p><a href="#">BLOG</a></p>
+                </div>
+                <div class="head-logo ">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="head-artists">
+                    <p><a href="#">ARTISTS</a></p>
+                    <p><a href="#">ABOUT</a></p>
+                    <p><a href="#">CONTACT</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-1">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-1-function " data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/image_slide_1.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/image_slide_2.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/image_slide_3.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/image_slide_4.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/image_slide_5.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <p class="main-name ">AWARDS</p>
+            <div class="row">
+                <div class="main-function">
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/hfn-award-2018-cl.png"
+                            alt=""></div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/award-hp-fest-tokyo3.png"
+                            alt=""></div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/6moon-award.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/hifi-news.png" alt="">
+                    </div>
+
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/VGP2021_LS_Gold_Logo_EN_250_x_250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/a-design-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/headphone-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/wall-of-fame-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/hifi-choice-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/6moon-award.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Audio_Bacon_award_215x215.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/pc-mag-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-hifi-plus-wall-of-fame-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-hautefidelite-wall-of-fame-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-earin-wall-of-fame-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-poor-audiophile-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/99classics-master-switch-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-audiophile-mag-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/stereo-life-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/awards-red-fingerprint-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/headphone-review.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/vgp-empyrean-award-3.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/hfn-2017-award-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/VGP2021_LS_Awarded_Logo.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/hifi-philosophy-cl.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/stereonet-award-empyrean.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/soundstage-award.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/HiFi_Philosophy_Meze-website.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Inner_Fidelity_Editor_s_Choice_250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/fwd-award.png" alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/headphone-award-2019.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/award-majorhifi-gold-award-2019.png?"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Empyrean_Reference-Haute_Fidelity_200x200.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/RAI-Penta-VGP2019s_rand_prize_for_earphone.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai-Penta-hpfes-award_silver215x215.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Penta_Refferenzklasse_Ear_In_Das_Kopfhorermagazin_award-215x215.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Empyrean_OnTopAudioAward_2019_215x215.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Empyrean_Heaphone.guru_award-250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Rai_Penta_Heaphone.guru_award_250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Empyrean_HiFi_2019_Award_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/BIGSEE_PRODUCT_DESIGN_AWARD_2019_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_99_Classics_SOUND_VISION_Top_Pick_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_RAI_Solo_Fujiya_Avic_Gold_Award.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Empyrean_-_Soundstage_award_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Empyrean_Diapason_dOR_Hifi_new_2019_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Rai_Penta_Innerfidelity_Editors_Choice_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Headfonia_Rai_Penta_2019_Award_250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/MezeAudio_Headfonics_2019_awards_250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/2020_Audio_Art_Best_Performance_of_The_Year_-_Meze_Audio_Empyrean_250px.jpg"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/AudioReputation_Meze_Empyrean_Award_250x250.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/AVT_Awards19_Meze_Empyrean_badge250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/HiFi_World_Outstanding.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Empyrean_fairaudios_favourite_2020-250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/The_Absolute_Sound_Product_of_the_Year_award_2019-250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Empyrean_Logo_REMARQUABLE_Saison4-250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Solo_Stereonet_SILVER_Applause_250_x_250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Award_logo_crown_250x250_px.jpg"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Penta-Audio_Fanatyk-REKOMENDACJA_250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Solo_Award_ajanlott_vetel_av_online_award-250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Penta_HiFi__EditorsChoice_2020-250x250px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/AUDIOKEY-DIAMOND_FINAL_1_250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files//Meze_Audio_Rai_Penta_Suprapixel_250.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Rai_Penta-HiFi__Awards_Winner_2020-250x250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Audio_Bacon.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/BigSEE_Product_Design_Award_2020.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/HIFICLUBE_HEADPHONES_OF_THE_YEAR_Meze_Empyrean_250_px.png"
+                            alt="">
+                    </div>
+                    <div class="main-mark col-3 col-lg-2"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Audio_Empyrean_Gearslutz_5_Stars.png"
+                            alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="carousel-2">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner carousel-2-function">
+                <div class="carousel-item active">
+                    <p>"In addition to looking and feeling incredible, the Meze Audio Empyrean has engineering details
+                        I’ve not seen before it.Never put off what you can do today until tomorrow."</p>
+                </div>
+                <div class="carousel-item">
+                    <p>“Having thoroughly enjoyed my time with the original Meze 99 Classic I was quite excited to hear
+                        of Meze's latest endeavor to make a flagship planar magnetic headphone. After a good hard
+                        look... I'm more excited than ever.”</p>
+                </div>
+                <div class="carousel-item">
+                    <p>“In a very real sense, the two-year process of developing the Empyrean was as much art project as
+                        it was a journey into proprietary technology. By extension, owners will acquire not just a
+                        headphone but a wearable piece of art.”</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="next-page">
+        <div class="container">
+            <div class="row next-page-function">
+                <div class="next-page-1">
+                    <a href="#"><i class="fas fa-caret-square-left"></i></a>
+                </div>
+                <div class="next-page-1">
+                    <a href="#"><i class="fas fa-caret-square-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="OUR-VALUES">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/free-worldwide-shipping-silver.png"
+                    class="picture-1" alt="">
+                <p class="main-name">OUR VALUES</p>
+            </div>
+            <div class="row ">
+                <div class="WE col-12 col-lg-4 px-lg-3 mx-auto my-5 text-center">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/values-01.jpg"
+                        class="picture-2" alt="">
+                    <p class="main-name-1">WE DONT FOLLOW TRENDS</p>
+                    <p>...or let them influence the audio quality or design of our products. We develop our own
+                        aesthetic
+                        language thus creating timeless design.
+                        Style must always be a by-product of high functionality and ergonomics. As classics have to
+                        outlive
+                        seasonal fashions, we design with long product life in mind.</p>
+                </div>
+                <div class="OBSESSING col-12 col-lg-4 px-lg-3 mx-auto my-5 text-center">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/values-02.jpg"
+                        class="picture-2" alt="">
+                    <p class="main-name-1">OBSESSING WITH QUALITY IN SOUND AND BUILD</p>
+                    <p>We build high-end headphones, so we obsess about sound quality. Every aspect counts. The
+                        engineering,
+                        choice of materials, the precision of craftsmanship, the reliability are all equally important.
+                        We also make parts easily replaceable. All of these to ensure that a feeling of trust will
+                        accompany
+                        your every interaction with a Meze.</p>
+
+                </div>
+                <div class="VIVID col-12 col-lg-4 px-lg-3 mx-auto my-5 text-center">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/values-03.jpg"
+                        class="picture-2" alt="">
+                    <p class="main-name-1">VIVID AND IMMERSIVE</p>
+                    <p>The sound signature is tuned for long listening sessions same as the ergonomics: clarity without
+                        harshness, freshness without fatigue.
+                        We know a headphone is ready when it makes you forget about the outside world and takes you for
+                        a
+                        dive into the universe of your own feelings.</p>
+                </div>
+            </div>
+            <p class="main-name">OUR PRODUCTS</p>
+            <div class="row PRODUCTS align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Empyrean_Phoenix_-_homepage_collection.png"
+                    class="d-block col-12 col-lg-3 my-lg-5" alt="">
+                <div class="main-product-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">MEZE ART GALLERY</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>We are proud to introduce to you Empyrean Phoenix - a rare collector's item, the first from the
+                        Meze
+                        Art Gallery collection. Empyrean Phoenix celebrates the rebirth of the world's first isodynamic
+                        hybrid array headphone by fusing our passion for art with high-end audio technology.</p>
+                </div>
+            </div>
+            <div class="row EMPYREAN align-items-lg-center">
+                <div class="main-empyrean-image col-12 my-5 col-lg-7 my-lg-5 order-lg-1 ">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Empyrean_black_copper_index_page.png"
+                        alt="" class="audio-image">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Empyrean_black_copper_index_page_357f1f20-18a3-4b7c-a71e-c17d6ebb23a1.png"
+                        alt="" class="audio-image">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/EmpGM-Discontinued2.png"
+                        alt="" class="audio-image">
+                </div>
+                <div class="main-empyprean-text col-12 col-lg-5 text-center order-lg-0">
+                    <p class="audio-name"><a href="#">EMPYREAN</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>A blend of premium materials, exquisite craftsmanship and detailing that’s unmistakably Meze,
+                        Empyrean is one of the most technologically innovative planar magnetic headphones in the world.
+                    </p>
+                </div>
+            </div>
+            <div class="row RAI-PENTA align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_Rai_Penta_bundle.png"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-rai-renta-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">RAI PENTA + FREE UPGRADE CABLE</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>A sensibly tuned sound signature and crystal clear clarity provide unrivaled realism and a vivid
+                        tonality. The build quality and ergonomic shape place this universal in ear monitor second to
+                        none.
+                </div>
+                </p>
+            </div>
+            <div class="row RAI-SOLO align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Rai_Solo_homepage_FIN_b1671b5f-48a0-44db-9fd6-d3747f85dd44.png"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-rai-solo-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">RAI SOLO</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>A fun-neutral sound tuning in a precious hand brushed sintered steel shell. The Rai Solo is built
+                        for
+                        entry-level audiophiles and is meant for one purpose only: to introduce you to the
+                        transcendental
+                        experience of auditioning music and discovering the magic of sound.</p>
+                </div>
+            </div>
+            <div class="row 99 align-items-lg-center">
+                <div class="main-99-image col-12 my-5 col-lg-7 my-lg-5 order-lg-1">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/homepage-99c-wg.png"
+                        alt="" class="audio-image">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/homepage-99c-ws.png"
+                        alt="" class="audio-image">
+                    <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/99_classics_Maple_Silver_discontinued.png"
+                        alt="" class="audio-image">
+                </div>
+                <div class="main-99-text col-12 col-lg-5 order-lg-0">
+                    <p class="audio-name"><a href="#">99 CLASSICS</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>The Meze 99 Classics delivers perfect natural sound even to the pickiest of audio lovers. The
+                        walnut
+                        and maple earcups, soft earpads, and the spring steel headband will make the 99 Classics an
+                        heirloom
+                        rather than just a pair of headphones</p>
+                </div>
+            </div>
+            <div class="row 99-NEO align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/homepage-99n.png"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-99-neo-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">99 NEO</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>A fresh take on the design of the 99 series, the Neo has a slightly different signature and the
+                        same
+                        audio quality. The 99 Neo features coal black textured earcups and cast zinc alloy hardware –
+                        creating a subtle yet cutting edge look for the contemporary audiophile.</p>
+                </div>
+            </div>
+            <div class="row 12-CLASSICS align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Meze_12_Classics_V2_index.png"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-12-classics-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">12 CLASSICS V2</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>With a secure in-ear fit, elegant earpiece construction and solid audio performance, the 12
+                        Classics
+                        V2 is the ideal earbud choice for any lifestyle, an expression of musicality and realism.</p>
+                </div>
+            </div>
+            <div class="row HEADPHONE-COUCH align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/Emphyrean_couch_-_INDEX.png"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-headphone-couch-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">HEADPHONE COUCH</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>Sturdy yet elegant, covered in vegan leather, the Headphone Couch completes any audiophile’s home
+                        furnishing.The Meze headphone couch is foldable, which makes it easy to store when you are not
+                        using
+                        it.It comes ready-assembled, so out of the box and straight at display in your headphone room!
+                    </p>
+                </div>
+            </div>
+            <div class="row ACCESSORIES align-items-lg-center">
+                <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/all_accessories-small_for_INDEX_b842c33f-b2fa-4aa8-bdf9-74eb53637855.jpg"
+                    class="d-block col-12 my-5 col-lg-3 my-lg-5" alt="">
+                <div class="main-accessories-text col-12 col-lg-8 text-center">
+                    <p class="audio-name"><a href="#">ACCESSORIES</a> </p>
+                    <div class="line">
+                    </div>
+                    <p>Rewire your sound with upgrade cables. Find earpad or headband replacements for your Meze
+                        headphones.
+                        Or choose to have an extra carrying pouch. The accessories that will fit with your favorite Meze
+                        products, bringing you extra listening comfort and a pleasant surprise.</p>
+                </div>
+            </div>
+        </div>
+        <div class="embed-responsive embed-responsive-21by9 w-75 mx-auto">
+            <iframe id="mframe" class=" w-100" src="https://www.youtube.com/embed/WKrZfB7Stqk" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="container">
+            <h1 class="main-name-1 OUR-TEAN">OUR TEAN</h1>
+            <div class="row OUR-TEAN">
+                <div class="people-function col-6 col-lg-2 ">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-antonio-meze.jpg"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/anto.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">ANTONIO MEZE</h5>
+                    <p class="people-position
+                            ">Lead Designer & Founder</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/mircea.png" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/mircea.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">MIRCEA FANATAN</h5>
+                    <p class="people-position
+                            ">Managing Director</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/raluca01.jpg" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/raluca02.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Raluca Vontea</h5>
+                    <p class="people-position
+                            ">Global Brand Manager</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-paul-stet.jpg"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/paul-s.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Paul Stet</h5>
+                    <p class="people-position
+                            ">Product Development</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-vlad-toca.jpg"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/vlad-t.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Vlad Toca</h5>
+                    <p class="people-position
+                            ">Magic Man</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/corina.png" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/corina-c.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Corina Catana</h5>
+                    <p class="people-position
+                            ">COO</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/kinga-m.jpg" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/kinga.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Kinga Meze</h5>
+                    <p class="people-position
+                            ">Operations</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-adrian-zaharia.png"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-adrian-zaharia-hover.png"
+                            alt="" class="people-light ">
+                    </div>
+                    <h5 class="people-name">Adrian Zaharia</h5>
+                    <p class="people-position
+                            ">Production Manager</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-ciprian-filimon.png"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-ciprian-filimon-hover.png"
+                            alt="" class="people-light ">
+                    </div>
+                    <h5 class="people-name">Ciprian Filimon</h5>
+                    <p class="people-position
+                            ">Electro Acoustic Engineer</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-razvan-horge.jpg"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/aurel.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Razvan Horge</h5>
+                    <p class="people-position
+                            ">Marketing</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/rizo-1.jpg" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/rizo-2.png" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Alexandra Rizoiu</h5>
+                    <p class="people-position
+                            ">Marketing & Social Media</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-vladimir-brezovszki.png"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-vladimir-brezovszki-hover.png"
+                            alt="" class="people-light ">
+                    </div>
+                    <h5 class="people-name">Vladimir Brezovszki</h5>
+                    <p class="people-position
+                            ">Designer</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-adrian-boca.png"
+                            alt="" class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/team-adrian-boca-hover.png"
+                            alt="" class="people-light ">
+                    </div>
+                    <h5 class="people-name">Adrian Boca</h5>
+                    <p class="people-position
+                            ">Operations</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/eddie1.jpg" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/eddie-2.jpg" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Eduard Bruzac</h5>
+                    <p class="people-position
+                            ">Quality Control</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/erika.png" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/erika-2.png" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Erika Colcer</h5>
+                    <p class="people-position
+                            ">Operations</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/horea.png" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/horea-2.png" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Horea Bogar</h5>
+                    <p class="people-position
+                            ">Electronics Engineer</p>
+                </div>
+                <div class="people-function col-6 col-lg-2">
+                    <div class="people mx-auto"><img
+                            src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/dodi.png" alt=""
+                            class="people-dark ">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/dodi-2.png" alt=""
+                            class="people-light ">
+                    </div>
+                    <h5 class="people-name">Vlad Walter</h5>
+                    <p class="people-position
+                            ">Manufacturing & Internal QC</p>
+                </div>
+
+
+            </div>
+
+            <div class="container">
+                <h1 class="main-name-1">PRESS</h1>
+                <div class="row watermark">
+                    <div class="watermark-1 6MOONS">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/press-6moons.png"
+                            alt="">
+                        <p>6MOONS</p>
+                    </div>
+                    <div class="watermark-1 HEAD-FI">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/press-headfi.png"
+                            alt="">
+                        <p>HEAD-FI</p>
+                    </div>
+                    <div class="watermark-1 INNERFIDELITY">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/press-innerfidelity.png"
+                            alt="">
+                        <p>INNERFIDELITY</p>
+                    </div>
+                    <div class="watermark-1 PCMAG">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/press-pcmag.png"
+                            alt="">
+                        <p>PCMAG</p>
+                    </div>
+                    <div class="watermark-1 HEADMANIA">
+                        <img src="./images/Meze Audio - Sound. Comfort. Design. True audio._files/press-headmania.png"
+                            alt="">
+                        <p>HEADMANIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="next-page">
+        <div class="container">
+            <div class="row next-page-function">
+                <div class="next-page-1">
+                    <a href="#"><i class="fas fa-caret-square-left"></i></a>
+                </div>
+                <div class="next-page-1">
+                    <a href="#"><i class="fas fa-caret-square-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-h"></div>
+            <div class="row footer-top border-bottom mb-2">
+                <div>
+                    <h3 class="text-light">COMPANY</h3>
+                </div>
+                <div class="plus"><i class="fas fa-plus-circle"></i></div>
+            </div>
+            <div class="row footer-top border-bottom mb-2">
+                <div>
+                    <h3 class="text-light">CUSTOMER SERVICE</h3>
+                </div>
+                <div class="plus"><i class="fas fa-plus-circle"></i></div>
+            </div>
+            <div class="row footer-top border-bottom mb-2">
+                <div>
+                    <h3 class="text-light">NEWSLETTER</h3>
+                </div>
+                <div class="plus"><i class="fas fa-plus-circle"></i></div>
+            </div>
+            <div class="row pay-f">
+                <div class="pay"><a href="#"><i class="fab fa-cc-paypal"></i></a></div>
+                <div class="pay"><a href="#"><i class="fab fa-cc-visa"></i></a></div>
+                <div class="pay"><a href="#"><i class="fab fa-cc-mastercard"></i></a></div>
+                <div class="pay"><a href="#"><i class="fab fa-cc-amex"></i></a></div>
+                <div class="pay"><a href="#"><i class="fab fa-cc-discover"></i></a></div>
+            </div>
+            <div class="line-1">
+            </div>
+            <p class="footer-copyright">Copyright © 2009 - 2021 Meze Audio - Sound. Comfort. Design. True audio.
+                <br><br>
+                <b class="">This store is PCI compliant
+            </p>
+            <div class="row footer-icon-f">
+                <div class="footer-icon"><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+                <div class="footer-icon"><a href="#"><i class="fab fa-youtube-square"></i></a></div>
+                <div class="footer-icon"><a href="#"><i class="fab fa-twitter-square"></i></a></div>
+                <div class="footer-icon"><a href="#"><i class="fab fa-invision"></i></a></div>
+                <div class="footer-icon"><a href="#"><i class="fab fa-instagram-square"></i></a></div>
+                <div class="footer-icon"><a href="#"><i class="fab fa-pinterest-square"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+// Check if DEVELOPMENT server
+if (document.currentScript.src.indexOf("alab.intelcoder.net") > -1)
+{
+	var base_url = "https://alab.intelcoder.net/";
+}
+else
+{
+	var base_url = "https://app.affiliatelab.xyz/";
+}
+
+// Get script params
+var params 		= document.currentScript.src.split("?");
+var value 		= params[1].split("=");
+var popupApiKey = value[1];
+
+// Check if we have jQuery loaded
+if (typeof jQuery == "undefined")
+{
+	var headTag 	= document.getElementsByTagName("head")[0];
+	var jqTag 		= document.createElement("script");
+
+	jqTag.type 		= "text/javascript";
+	jqTag.src 		= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js";
+	jqTag.onload 	= getTrackSettings;
+
+	headTag.appendChild(jqTag);
+}
+else
+{
+	$(document).ready(function()
+	{
+		getTrackSettings();
+	});
+}
+
+function getTrackSettings()
+{
+	$.ajax({
+		url: base_url+"track/getsettings?key="+popupApiKey,
+			dataType: "jsonp",
+			success: function (data)
+			{
+				initPopupAPI(data);
+			}
+	});
+}
+
+function initPopupAPI(settings)
+{
+	if (settings.tracking_system == "cookie")
+	{
+		var currurl = window.location.href;
+		var myarray = currurl.split("#");
+
+		if (myarray[1])
+		{
+			if (document.cookie.indexOf("alab_aff_id") < 0)
+			{
+				var date = new Date();
+
+				date.setDate(date.getDate() + 30);
+
+				document.cookie = "alab_aff_id="+myarray[1]+"; expires="+date.toUTCString()+"; path=/; samesite=lax";
+
+				window.location.hash = "";
+			}
+
+			trackPageAccess(myarray[1], "cookie");
+		}
+
+		cartPageAddition();
+	}
+	else
+	{
+		var currurl 		= window.location.href;
+		var cur_path 		= window.location.pathname;
+		var myarray 		= currurl.split("#");
+		var discountcode 	= (myarray[1] != undefined) ? myarray[1] : '';
+
+		// Show popup only if the URL contains the /# string - this is only for the AffiliateLab app
+		// Show popup only if discount code doesn't contain the _a_ string - this is a workaround for all Blonyx stores which are using an old affiliate app
+		if (currurl.indexOf("/#") > -1 && discountcode.includes("_a_") === false)
+		{
+			if (myarray[1] && cur_path.length < 2)
+			{
+				trackPageAccess(myarray[1], "code");
+
+				if (settings.popup_enabled == "yes")
+				{
+					var popup = '<div><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css><style type=text/css>.alab-popup-wrapper{font-size:14px;border:3px solid ' + settings.border_color + ';max-width:500px;height:230px;margin:0 auto;position:absolute;top:100px;left:0;right:0;z-index:10000;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0 10px 20px #000;-moz-box-shadow:0 10px 20px #000;-webkit-box-shadow:0 10px 20px #000}.alab-container-up{background-color:' + settings.text_bg_color + ';height:50%}.alab-container-up p{font-size:14px;color:' + settings.text_color + ';text-align:center;margin:0;padding:10% 10px 0}.alab-popup-dashline{border-top:1px dashed #FFF;background-color:#211E27}.alab-popup-scissors{position:absolute;top:89px;left:10px;font-size:17px;color:#000}.alab-container-down{background-color:' + settings.discount_bg_color + ';height:50%}.alab-discount-code{font-size:35px;font-weight:700;color:' + settings.discount_color + ';margin:0;text-align:center;text-transform:uppercase;padding:5% 0 0}.alab-popup-close{margin:3% 0 0;text-align:center}.alab-btn-close{font-size:10px;color:#FFF;text-decoration:none;text-transform:uppercase;cursor:pointer}.alab-btn-close:hover{color:#FFF;text-decoration:underline}p{line-height:initial}.alab-body-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.2;z-index:9999}</style><div class=alab-body-wrapper></div><div id=alab_popup class=alab-popup-wrapper><div class=alab-container-up><p>' + settings.popup_text + '</div><div class=alab-popup-dashline></div><div class=alab-popup-scissors><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i> <i class="fa fa-scissors fa-stack-1x"></i></span></div><div class=alab-container-down><p class=alab-discount-code>' + discountcode + '<p class=alab-popup-close><a class=alab-btn-close onclick=\'window.location = "'+myarray[0]+'discount/'+myarray[1]+'";\'>Close</a></div></div></div>';
+
+					$("body").append(popup);
+				}
+				else
+				{
+					window.location = myarray[0]+"discount/"+myarray[1];
+				}
+			}
+		}
+	}
+}
+
+function hidePopup()
+{
+	$("#alab_popup").hide();
+}
+
+function getCookie(cname)
+{
+    var name 	= cname + "=";
+    var ca 		= document.cookie.split(";");
+
+    for (var i = 0; i < ca.length; i++)
+    {
+        var c = ca[i];
+
+        while (c.charAt(0) == " ")
+        {
+            c = c.substring(1);
+        }
+
+        if (c.indexOf(name) == 0)
+        {
+            return c.substring(name.length, c.length);
+        }
+    }
+
+    return "";
+}
+
+function cartPageAddition()
+{
+	if (window.location.pathname == "/cart")
+	{
+		if (document.cookie.indexOf("alab_aff_id") > -1)
+		{
+			var aff_id = getCookie("alab_aff_id");
+
+			var tmp_html = '<p class="cart-attribute__field" style="display:none;"><label for="alab_affiliate_id">Affiliate Lab ID</label><input id="alab_affiliate_id" type="text" name="attributes[alab_affiliate_id]" value="'+aff_id+'"></p>';
+
+			$("form[action='/cart']").append(tmp_html);
+		}
+	}
+}
+
+function trackPageAccess(tracking_code, track_type)
+{
+	$.ajax({
+		url: base_url+"track/trackpage?code="+tracking_code+"&type="+track_type,
+			dataType: "jsonp",
+			success: function (data)
+			{
+				return true;
+			}
+	});
+}

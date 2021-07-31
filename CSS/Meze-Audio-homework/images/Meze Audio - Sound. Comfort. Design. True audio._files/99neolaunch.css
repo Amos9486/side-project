@@ -1,0 +1,483 @@
+#nonvideo {
+  
+  transition:all 1s ease-in-out;}
+
+
+.calin-vsg-container{
+   opacity:0;
+   -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+}
+
+.calins-svgs {
+  position:absolute;
+  z-index:20;
+  top:0;
+  width:100%;
+  display:block;
+}
+
+
+.pause-button {
+    opacity: 0;
+    transition: 1s opacity ease-out;
+    position: absolute;
+    top: 0;
+}
+
+
+.playing {
+   transition:1s opacity ease;
+   opacity:0;
+   pointer-events: none;
+}
+
+.availability {
+   position:absolute;
+   left: 50%;
+   z-index:200;
+   align-items:center;
+   text-align:center;
+   transform:translateX(-50%);
+  bottom: 15%;
+    text-decoration: none;
+}
+.availability:hover {
+  text-decoration:none;
+}
+
+
+.info-99-neo {
+    transform: translateX(-50%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  height: 100%;
+  
+}
+
+.info-99-neo:first-child {
+  position: absolute;
+    left: 50%;
+  top: calc(50% - 180px);
+}
+
+a.info-99-neo {
+  top: calc(88% - 56px);
+}
+
+a.info-99-neo .wereago {
+  bottom:20%;
+}
+
+.motto-1 {
+      color: white;
+    font-size: 1.5em;
+    margin: 0;
+    transition: all 6.4s ease;
+  -webkit-transition:  all 6.4s ease;
+    letter-spacing: 0px;
+    width: 184px;
+}
+
+.motto-1:hover {
+  letter-spacing: 2px;
+}
+
+.info-99-neo a:first-child > svg {
+  width: 330px;
+    max-width: 350px;
+  pointer-events:none;
+}
+
+.hp-bunnon-holder {
+  
+}
+
+.calin-vsg-container {
+  width:96px;
+  height:96px;
+  border-radius:500px;
+  border:2px solid white;
+  transition: 0.6s all ease-in-out;
+  overflow: hidden;
+   vertical-align: middle;
+    text-align: center;
+   display: table-cell;
+   opacity:1;
+   pointer-events:all;
+}
+
+.calin-vsg-container img {
+   height:auto;
+   width:80px;
+   transition:0.4s all ease;
+}
+
+.calin-vsg-container:hover {
+  background:rgba(255,255,255,0.3);
+}
+
+.wereago .calin-vsg-container:hover {
+  background:rgba(255,255,255,0.3);
+}
+
+.mbcalin {
+   transition: 0.8s all ease-in-out;
+   position: absolute;
+   left: 50%;
+   transform:translateX(-50%);
+}
+
+.egginthedough {
+  /* better safe than sorry*/ 
+}
+
+.hidenow {
+   opacity:0;
+   pointer-events:none;
+}
+
+.pause-button {
+    height: 100%;
+}
+
+.pause-button  img {
+   margin-top: 2px;
+}
+
+.firsticon {
+    z-index: 25;
+    bottom: 40%;
+   transform:translateX(-150%);
+}
+
+.secondicon {
+    z-index: 25;
+    bottom: 40%;
+}
+
+.thirdicon {
+	position: absolute;
+    z-index: 60;
+    bottom: 18%;
+    left: calc(50% + 165px);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 1s;
+}
+
+.firsticon.wereago {
+    left: calc(50% - 65px);
+    bottom: 18%;
+   transform:translateX(-50%);
+}
+
+.secondicon.wereago {
+    left: 50%;
+    bottom: 18%;
+   transform:translateX(-50%);
+}
+
+.thirdicon.wereago {
+	left: calc(50% + 65px);
+	opacity: 1;
+	pointer-events:all;
+	transition-delay: 0s;
+}
+
+.wereago .calin-vsg-container {
+   width: 46px;
+   height: 46px;
+   background: rgba(0,0,0,0.3);
+}
+
+.wereago .calin-vsg-container img {
+   width:40px;
+}
+
+
+
+#buynow {
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+   opacity: 0;
+    pointer-events: none;
+   transition:1s all ease-in-out;
+}
+
+.fade-out {
+	opacity:0.1;
+}
+
+#buynow button { min-width: 150px;}
+}
+
+#buynow.visible button {
+    border:none;
+  
+    text-transform: uppercase;
+}
+
+#buynow.visible {
+   opacity:1;
+   pointer-events:all;
+}
+
+.pulematuri .container {
+   transition: 0.6s all ease-in-out;
+  position: absolute;
+	width: 100%;
+	height: 100%;
+   margin:0;
+   padding:0;
+	background-color: #E0E1E4;
+   background: transparent url('https://cdn.shopify.com/s/files/1/1238/0038/files/Slider-99neo.jpg?13576215043210464961') 50% 50% / cover no-repeat ;
+  overflow:hidden;
+
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-inner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+  pointer-events:none;
+}
+
+.video-player-container{
+	width: 100%;
+    height: 100%;
+  position: absolute;
+    top: 0;
+}
+
+.video-container {
+	height: 100%;
+	background-color: black;
+}
+
+#media-video {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.player-container {
+  color:white;
+}
+
+.play-control, .volume-control {
+	cursor: pointer;
+}
+
+.volume-button-mute {
+	vertical-align: middle;
+	text-align: center;
+}
+.indicator {
+	bottom: calc(18% + 46px);
+    z-index: 25;
+    color: white;
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+    text-align: center;
+    float: left;
+  opacity:0;
+}
+
+.progress {
+	width: 180px;
+	height: 2px;
+	float: left;
+}
+
+.progress-background {
+	position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: white;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.wereago .progress-background {
+  background-color:rgba(255,255,255,0.5);
+}
+
+.progress-over {
+	position: absolute;
+    width: 240px;
+    height: 1px;
+    background-color: white;
+    margin-left: 0;
+    margin-top: 10px;
+    left: 0;
+    transform: translateX(0%);
+    transition: 0.1s all ease;
+  opacity:0;
+}
+
+.wereago .progres-over {
+  opacity:1;
+}
+
+.progress-hidden {
+	position: absolute;
+    width: 240px;
+    height: 14px;
+    margin-left: 0;
+    cursor: pointer;
+    background: rgba(0,0,0,0);
+}
+
+.progress:hover .progress-hidden {
+	    background: rgba(0,0,0,0.3);
+}
+
+.progress.mbcalin {
+	width: 240px;
+    height: 14px;
+    bottom: 12%;
+    margin: 0;
+    background: none;
+    border-radius: 0;
+}
+
+.progress .progress-over {
+  
+  transition: all 0.4s linear;}
+
+.fullscreen-button {
+	cursor: pointer;
+}
+
+.fullscreen-button i {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	border-left: 1px solid #dddddd;
+}
+
+ .st0{fill:#FFFFFF;}
+
+.wereago {
+   opacity:1;
+}
+
+.goingbig.video-player-container {
+  position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+
+.goingbig video {
+    
+}
+
+.hiding .calin-vsg-container {
+  border:0 solid rgba(255,255,255,0);
+background:rgba(255,255,255,0);}
+
+.wereago.hiding {
+	transition: all 0.4s ease-in-out;
+	opacity: 0.5;
+}
+
+.wereago.hiding.indicator, .wereago.hiding.progress-background { opacity:0;}
+.firsticon.hiding, .secondicon.hiding, .thirdicon.hiding {
+    transition-delay:4s; opacity:0;}
+
+.progress.lsmofo {
+  bottom: 3%;
+}
+
+.progress.lsmofo, .progress.lsmofo > div {
+  width:95%;}
+
+.firsticon.lsmofo, .secondicon.lsmofo, .thirdicon.lsmofo {
+  bottom:5%;
+}
+
+.indicator.lsmofo {
+  bottom:0;
+}
+
+
+
+@media screen and (max-width:1070px) {
+  .calin-vsg-container {
+    width: 4.2em;
+    height: 4.2em;}
+  .calin-vsg-container img {
+    height: auto;
+    width: 3.5em;}
+  .info-99-neo a:first-child > svg {
+    width: 240px;}
+  .info-99-neo:first-child {
+    top: calc(50% - 8em);}
+  .progress.mbcalin{bottom: 5%;}
+    .indicator {opacity:0;}
+}
+
+@media screen and (max-width:500px) {
+  .calin-vsg-container {
+    width: 3.2em;
+    height: 3.2em;}
+  .calin-vsg-container img {
+    height: auto;
+    width: 2.5em;}
+  .info-99-neo a:first-child > svg {
+    width: 180px;}
+  .info-99-neo:first-child {
+    top: calc(50% - 6.5em);}
+  .motto-1 {
+    font-size: 1em;}
+  a.info-99-neo {
+    top: calc(88% - 28px);
+  }
+  .progress.mbcalin {
+    bottom: 0%;
+  }
+  .progress.wereago {bottom: 5px;}
+  .progress-background {
+    margin-top:0px;}
+  .wereago .progress-background {
+    opacity:0.1;}
+  .firsticon.wereago, .secondicon.wereago, .thirdicon.wereago {
+    bottom: 13%;}
+  .firsticon.wereago.lsmofo, .secondicon.wereago.lsmofo, .thirdicon.wereago.lsmofo {
+    bottom: 5%;}
+  #buynow {
+    top: 43%; width: 100%;}
+  #buynow.visible button {font-size: 1.5em; padding: 10px 50px;}
+
+  .progress.wereago, .progress-background.wereago, .progress-hidden.wereago {
+    width: 100%;}
+  .progress-over {margin-top:0}
+  .progress.lsmofo {
+    bottom: 0%;}
+  
+}
+
+
+*:fullscreen
+*:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+   overflow: auto !important;
+}

@@ -1,0 +1,147 @@
+jQuery(document).ready(function($)
+{
+  var windowWidth = $(window).width();
+
+  var errmsg = $(".mce_inline_error");
+
+  if (windowWidth > 760)
+  {
+    $("#nav_tabs").sticky({
+      topSpacing: 0,
+      zIndex: 10
+    });
+  }
+
+  // Product page anchors
+  $(".scroll-style").click(function()
+  {
+    // $(".product-simple-tab ul li").removeClass("active");
+    // $(".scroll-style").addClass("active");
+    $("#tab_style").scrollToMe();
+    return false;
+  });
+
+  $(".scroll-specs").click(function()
+  {
+    // $(".product-simple-tab ul li").removeClass("active");
+    // $(".scroll-specs").addClass("active");
+    $("#tab_specs").scrollToMe();
+    return false;
+  });
+
+  $(".scroll-features").click(function()
+  {
+    // $(".product-simple-tab ul li").removeClass("active");
+    // $(".scroll-features").addClass("active");
+    $("#tab_features").scrollToMe();
+    return false;
+  });
+
+  $(".scroll-reviews").click(function()
+  {
+    // $(".product-simple-tab ul li").removeClass("active");
+    // $(".scroll-reviews").addClass("active");
+    $("#tab_reviews").scrollToMe();
+    return false;
+  });
+  // Product page anchors
+
+  $(window).scroll(function()
+  {
+    var position = $(this).scrollTop();
+
+    $(".section").each(function()
+    {
+      var target = $(this).offset().top - 100;
+      var id = $(this).attr("id");
+
+      if (position >= target)
+      {
+        $(".product-simple-tab ul > li > a").removeClass("active");
+        $(".product-simple-tab ul > li > a[href=#" + id + "]").addClass("active");
+      }
+    });
+  });
+
+  // Newsletter animations
+  $("#mce-EMAIL").keypress(function() {
+  	$(".nwsltr").addClass("isfocused");
+
+    function slideFade(elem) {
+      var fade = { opacity: 0, transition: 'opacity 0.5s' };
+
+      elem.css(fade).slideUp();
+    }
+
+    slideFade($('.notimportant'));
+  });
+});
+
+jQuery(document).scroll(function() {
+  var notifheight = $(".main-text-pop").height();
+
+  $(".full-width.visible").css("height", notifheight);
+});
+
+
+//Homepage Awards fade in
+
+if ( location.pathname == "/" ) {
+  $('#awards-carousel').addClass("visible");
+}
+
+
+// COmmunity Script
+
+if ( location.pathname == "/blogs/artists" ) {
+
+  jQuery.fn.mouseIsOver = function () {
+    if($(this[0]).is(":hover"))
+    {
+        return true;
+    }
+    return false;
+};
+
+  var werefull = false;
+
+  jQuery(document).ready(function($) {
+
+
+
+
+  $('.testi-anim').click(function (event) {
+
+    if ( werefull !== true ) {
+      	$(this).addClass('imhere');
+  		$('.testi-container').addClass('nomoreclicks');
+      	$('body').css('background', '#d5d4cf');
+      werefull = true;
+
+
+    } else {
+       if($(event.target).is('p') || $(event.target).is('span') || $(event.target).is('blockquote') || $(event.target).is('.post-desc-cont > img')){
+            event.preventDefault();
+            return;
+        }
+
+
+      werefull = false;
+
+
+
+      		$(this).removeClass('imhere');
+  		  	$('.testi-container').removeClass('nomoreclicks');
+    }
+
+	});
+
+    $('document').click( function() {
+                       	$('html, body').css({
+                            overflow: 'auto',
+                            height: 'auto'
+                        });
+
+                       });
+  });
+}
